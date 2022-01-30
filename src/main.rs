@@ -1,5 +1,6 @@
 //cargo run { i)creates exec in target/debug ii)executes }
-//cargo build - builds ( produces exec )
+//cargo build - builds ( produces exec ) dev profile
+//cargo build --release #release profile
 //cargo check - builds without producing exec (fast)
 //cargo build --release {produces exe in target/release }
 //cargo run > output.txt

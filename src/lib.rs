@@ -1,5 +1,5 @@
-use std::{fs, env};
-use std::error::Error;
+//! Mgrep
+//! mgrep is a command to search a stirng in a file
 
 #[cfg(test)]
 mod tests;
@@ -37,7 +37,16 @@ pub struct Config<'a> {
     pub filename: &'a str,
     pub case_sensitive: bool,
 }
-
+///Case sensitive search query in a Contents string
+///
+/// # Examples
+/// ```
+/// let query = "hello";
+/// let contents = "\
+/// hello Anatoly
+/// How are you?";
+/// assert_eq!(vec!["hello Anatoly"], mgrep::search(query, contents));
+/// ```
 pub fn search<'a> (query: &str, contents: &'a str) -> Vec<&'a str>{
     //let mut results: Vec<&str> = Vec::new(); //not good if we want concurrent access
     /*
