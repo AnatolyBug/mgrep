@@ -4,6 +4,9 @@
 #[cfg(test)]
 mod tests;
 
+use std::error::Error;
+use std::{env, fs};
+
 //Box<dyn Error> means the funciton will return a Type that implements the Error trait
 //smth like Err(Trait)
 pub fn run(conf: Config2) -> Result<(), Box<dyn Error>>{
